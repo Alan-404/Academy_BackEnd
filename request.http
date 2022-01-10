@@ -1,0 +1,98 @@
+POST http://localhost:8000/account
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "123"
+}
+
+
+###
+POST http://localhost:8000/account/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "234"
+}
+
+###
+PUT http://localhost:8000/account/change-password
+Content-Type: application/json
+Authorization: Bearer eyJpdiI6IklFSnYzRzVmYXg1aC8zbXU0dUxrM1E9PSIsInZhbHVlIjoiUnF1UzNJL1Uwbi8zenJoekt0VGkyZz09IiwibWFjIjoiMDg2ZjZkYTNhNWI3NDgyODlmODAxODJhMmY0OWIxMWNiYTUwOWQ5MTA3ZWY2MWQ1MzFmNDhkNjIxYjdiZDljMyIsInRhZyI6IiJ9
+
+{
+    "oldPassword": "123",
+    "newPassword": "234"
+}
+
+###
+GET http://localhost:8000/account/test
+Content-Type: application/json
+Authorization: Bearer eyJpdiI6IklFSnYzRzVmYXg1aC8zbXU0dUxrM1E9PSIsInZhbHVlIjoiUnF1UzNJL1Uwbi8zenJoekt0VGkyZz09IiwibWFjIjoiMDg2ZjZkYTNhNWI3NDgyODlmODAxODJhMmY0OWIxMWNiYTUwOWQ5MTA3ZWY2MWQ1MzFmNDhkNjIxYjdiZDljMyIsInRhZyI6IiJ9
+
+###
+GET http://localhost:8000/account
+Content-Type: application/json
+
+####
+POST http://localhost:8000/subject
+Content-Type: application/json
+
+{
+    "name": "Introduction To Programming"
+}
+
+####
+POST http://localhost:8000/subject
+Content-Type: application/json
+
+{
+    "name": "Programming Techniques"
+}
+
+####
+GET http://localhost:8000/subject
+Content-Type: application/json
+
+###
+POST http://localhost:8000/teacher
+Content-Type: application/json
+
+{
+    "firstName": "Nguyễn",
+    "middleName": "Đức",
+    "lastName":"Trí",
+    "bDate": "2001-04-04",
+    "address": "34A",
+    "phone": "0912121",
+    "email": "nguyentri.alan@gmail.com"
+}
+
+###
+GET http://localhost:8000/teacher
+Content-Type: application/json
+
+
+###
+GET http://localhost:8000/student
+Content-Type: application/json
+
+
+###
+GET http://localhost:8000/lesson
+Content-Type: application/json
+
+###
+POST http://localhost:8000/lesson
+Content-Type: application/json
+
+{
+    "id":"6",
+    "timeStart":"19:00",
+    "timeEnd": "20:30"
+}
+
+###
+DELETE http://localhost:8000/lesson?id=6
+Content-Type: application/json
